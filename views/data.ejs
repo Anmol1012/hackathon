@@ -1,0 +1,143 @@
+<!-- 	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.i/css/font-awesome.min.css">
+		<title>
+			Welcome to makaan-Gurgaon Listings
+		</title>
+	</head>
+		<h2>Gurgaon Listings </h2>
+		<div class="logo">
+			<img src="/images/makaan.png"> <br>
+		</div>
+		<div class="header">
+			<div class="dropdown">
+				<button class="dropbtn" onclick="myFunction(this.id)"><i class="fa fa-cog"></i> Filters
+				</button>
+				<div class="dropdown-text" id="mydropdown">	
+				</div>
+			</div>
+			<script type="text/javascript" src="script.js"></script>
+			<style type="text/css"></style>
+			<div class = "dropdown">
+				<button class="dropbtn" onclick="myFunction(this.id)">Buy
+					<i class="fa fa-angle-down"></i>
+				</button>
+				<div class="dropdown-text" id="mydropdown">
+					<a href="#">Buy</a>
+					<a href="#">Rent</a>
+				</div>
+			</div>
+			<div class = "dropdown">
+				<button class="dropbtn" onclick="myFunction(this.id)">Bedroom
+					<i class="fa fa-angle-down"></i>
+				</button>
+				<div class="dropdown-text" id="mydropdown">
+					<a href="#">1BHK</a>
+					<a href="#">2BHK</a>
+					<a href="#">3BHK</a>
+					<a href="#">3+BHK</a>
+				</div>
+			</div>
+			<div class = "dropdown">
+				<button class="dropbtn" onclick="myFunction()">
+					<i class="fa fa-refresh"></i> Reset
+				</button>
+				<div class="dropdown-text" id="mydropdown">
+			</div>
+		</div>
+	</div> -->
+	<!-- <div class="listingcard"> -->
+		<div class="container">
+			<div class="card">
+				<div class="cardimg">
+					<img src="<%= json.items[i].listing.mainImageURL %>" class="cardimg1">
+				
+					<div class="sellerrow">
+			<img src="<%= json.items[i].listing.companySeller.user.profilePictureURL %>"
+						class="slrimg">
+						<div class="sellerinfo">
+							<div class="sellername"><%= json.items[i].listing.companySeller.user.fullName %></div>
+							<div class="rating">
+								<%= json.items[i].listing.sellerCallRatingCount + " ratings" %>
+							</div>
+							<div class="sellertype">
+								<% var str = json.items[
+									i].listing.listingSellerTransactionStatuses[0];
+									var type = str.split('_').join(' ');%>
+								<%=	type  %>	
+							</div>
+							<!-- <div class="rating">
+								
+							</div> -->
+						</div>
+					</div>
+				</div>
+			<div class="buildingdesc">
+				<h4 class="name"><strong><%= json.items[i].listing.property.bedrooms + " BHK " + json.items[i].listing.property.unitType %>
+				</strong>
+				<font color="grey">in <%= json.items[i].listing.property.project.builder.name + " " + json.items[i].listing.property.project.name %></font>
+				</h4><br>
+				<font color="grey">
+					<p class="city"><%= json.items[i].listing.property.project.locality.label + "," + json.items[i].listing.property.project.locality.suburb.city.label %>
+					</p></font>
+				<div class="listing">
+					<div class="hcol">
+						<div class="price">
+							<span>₹ 
+							  <% var price = json.items[i].listing.currentListingPrice.price;
+								 if((price/10000000)>1) {
+								 price = Number((price/10000000).toFixed(2));
+								 var temp="Cr."; } 
+								 else { 
+								 price = Number((price/10000000).toFixed(2));
+								 var temp="L"; } %>
+							
+								<%= price %> <%= temp %>
+							</span>
+						</div>
+						<div class="lbl"><%= json.items[i].listing.property.carpetArea +"/" + json.items[i].listing.property.measure %>
+							
+						</div>
+							
+					</div>
+					<div class="hcol">
+						<div class="size">
+							<span><%= json.items[i].listing.property.size %>
+							</span>
+						</div>
+						<div class="lbl">Area in
+							<%= json.items[i].listing.property.measure %>
+							
+						</div>	
+					</div>
+					<div class="hcol w1">
+						<div class="val">
+							<%= json.items[i].listing.property.
+							project.projectStatus %>
+						</div>
+						<div class="lbl">
+							Construction Status
+							<img src="/images/link.png" class="link">
+						</div>
+					</div>	
+				</div>
+			
+			<div class="desc">
+				<div class="bathrooms"><%= json.items[i].listing.property.bathrooms + " Bathrooms" + " |" %>
+					<%= json.items[i].listing.floor %> <sup>th</sup>
+					<%= "of " + json.items[i].listing.totalFloors + "floors" %>
+				</div>
+				<div class="info">
+					<%= json.items[i].listing.description %>
+				</div>
+				<div class="shortlist">
+					<img src="/images/bookmark.png" id="shortlist" class="shortlist1" 
+					onclick="changeImage()">
+					<img src="/images/share.png" class="share">
+				</div>
+			</div>
+		</div>
+		</div>	
+	</div>
+<!-- </div> -->
