@@ -1,18 +1,17 @@
-
 		<div class="container">
-			<div class="card">
+			<div class="card" onclick="<%= json.items[i].lising.resaleURL %>">
 				<div class="cardimg">
-					<img src="<%= rent.items[i].listing.mainImageURL %>" class="cardimg1">
+					<img src="<%= json.items[i].listing.mainImageURL %>" class="cardimg1">
 				
 					<div class="sellerrow">
-			<img src="<%= rent.items[i].listing.companySeller.user.profilePictureURL %>"
+			<img src="<%= json.items[i].listing.companySeller.user.profilePictureURL %>"
 						class="slrimg">
 						<div class="sellerinfo">
-						<div class="sellername"><%= rent.items[i].listing.companySeller.company.name %></div>
+						<div class="sellername"><%= json.items[i].listing.companySeller.company.name %></div>
 						<div class="rating">
 								<%= json.items[i].listing.sellerCallRatingCount + " ratings" %>
 							</div>
-						<div class="sellertype"><% var str = rent.items[
+						<div class="sellertype"><% var str = json.items[
 									i].listing.listingSellerTransactionStatuses[0];
 									var type = str.split('_').join(' '); %>
 								<%=	type  %>
@@ -22,38 +21,38 @@
 					</div>
 				</div>
 			<div class="buildingdesc">
-				<h4 class="name"><strong><%= rent.items[i].listing.property.bedrooms + " BHK " + rent.items[i].listing.property.unitType %>
+				<h4 class="name"><strong><%= json.items[i].listing.property.bedrooms + " BHK " + json.items[i].listing.property.unitType %>
 				</strong>
-				<font color="grey">in <%= rent.items[i].listing.property.project.builder.name + " " + rent.items[i].listing.property.project.name %></font>
+				<font color="grey">in <%= json.items[i].listing.property.project.builder.name + " " + json.items[i].listing.property.project.name %></font>
 				</h4><br>
 				<font color="grey">
-					<p class="city"><%= rent.items[i].listing.property.project.locality.label + "," + rent.items[i].listing.property.project.locality.suburb.city.label %>
+					<p class="city"><%= json.items[i].listing.property.project.locality.label + "," + json.items[i].listing.property.project.locality.suburb.city.label %>
 					</p></font>
 				<div class="listing">
 					<div class="hcol">
 						<div class="price">
 							<span>
-							  <%= rent.items[i].listing.currentListingPrice.price %>
+							  <%= json.items[i].listing.curjsonListingPrice.price %>
 							</span>
 						</div>
-						<div class="lbl"><%= rent.items[i].listing.property.carpetArea +"/" + rent.items[i].listing.property.measure %>
+						<div class="lbl"><%= json.items[i].listing.property.carpetArea +"/" + json.items[i].listing.property.measure %>
 							
 						</div>
 							
 					</div>
 					<div class="hcol">
 						<div class="size">
-							<span><%= rent.items[i].listing.property.size %>
+							<span><%= json.items[i].listing.property.size %>
 							</span>
 						</div>
 						<div class="lbl">Area in
-							<%= rent.items[i].listing.property.measure %>
+							<%= json.items[i].listing.property.measure %>
 							
 						</div>	
 					</div>
 					<div class="hcol w1">
 						<div class="val">
-							<%= rent.items[i].listing.furnished %>
+							<%= json.items[i].listing.furnished %>
 						</div>
 						<div class="lbl">
 							Status
@@ -64,11 +63,11 @@
 				</div>
 			
 			<div class="desc">
-				<div class="bathrooms"><%= rent.items[i].listing.property.bathrooms + " Bathrooms" + " |" %>
-					₹ <%= rent.items[i].listing.securityDeposit + " Deposit" %>
+				<div class="bathrooms"><%= json.items[i].listing.property.bathrooms + " Bathrooms" + " |" %>
+					₹ <%= json.items[i].listing.securityDeposit + " Deposit" %>
 				</div>
 				<div class="info">
-					<%= rent.items[i].listing.description %>
+					<%= json.items[i].listing.description %>
 				</div>
 				<div id="shortlist">
 					<img src="/images/bookmark.png" class="shortlist1" onclick="this.src='/images/bookmark1.png'">
