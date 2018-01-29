@@ -56,8 +56,11 @@
 			</ul>
 	<% var i; %>
 	<% for(i=0;i<20;i++) { %>
+		<% if ((json.items[i].listing.listingCategory == "Resale") || (json.items[i].listing.listingCategory == "Primary")) { %>
 		<% include data %>
-		<% } %>
+		<% } else { %>
+		<% include rent %>
+		<% } } %>
 		
 		
 </body>

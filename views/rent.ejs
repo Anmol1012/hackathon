@@ -1,5 +1,5 @@
 		<div class="container">
-			<div class="card" onclick="<%= json.items[i].lising.resaleURL %>">
+			<div class="card">
 				<div class="cardimg">
 					<img src="<%= json.items[i].listing.mainImageURL %>" class="cardimg1">
 				
@@ -32,7 +32,7 @@
 					<div class="hcol">
 						<div class="price">
 							<span>
-							  <%= json.items[i].listing.curjsonListingPrice.price %>
+							  <%= json.items[i].listing.currentListingPrice.price %>
 							</span>
 						</div>
 						<div class="lbl"><%= json.items[i].listing.property.carpetArea +"/" + json.items[i].listing.property.measure %>
@@ -71,6 +71,10 @@
 				</div>
 				<div id="shortlist">
 					<img src="/images/bookmark.png" class="shortlist1" onclick="this.src='/images/bookmark1.png'">
+					<img src="/images/share.png" class="share">
+					<button class="viewphone">View Phone
+						
+					</button>
 				</div>
 			</div>
 		</div>

@@ -354,3 +354,13 @@ li.dropdown {
     height: 35px;
     color: grey;
 }
+.viewphone
+{
+    color: white;
+    border-radius: 15px;
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    
+    float:  right;
+}

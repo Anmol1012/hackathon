@@ -74,7 +74,7 @@
 					</div>
 				</div>
 			<div class="buildingdesc">
-				<h4 class="name" href="#" src = "https://www.makaan.com + <%= json.items[i].listing.resaleURL %>" ><strong><%= json.items[i].listing.property.bedrooms + " BHK " + json.items[i].listing.property.unitType %>
+				<h4 class="name"  ><strong><%= json.items[i].listing.property.bedrooms + " BHK " + json.items[i].listing.property.unitType %>
 				</strong>
 				<font color="grey">in <%= json.items[i].listing.property.project.builder.name + " " + json.items[i].listing.property.project.name %></font>
 				</h4><br>
@@ -132,9 +132,11 @@
 					<%= json.items[i].listing.description %>
 				</div>
 				<div class="shortlist">
-					<img src="/images/bookmark.png" id="shortlist" class="shortlist1" 
-					onclick="changeImage()">
+					<img src="/images/bookmark.png" id="shortlist" class="shortlist1" onclick="this.src='/images/bookmark1.png'">
 					<img src="/images/share.png" class="share">
+					<button class="viewphone">View Phone
+						
+					</button>
 				</div>
 			</div>
 		</div>

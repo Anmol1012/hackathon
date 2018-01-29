@@ -19,11 +19,11 @@
 // 	document.getElementById('shortlist').innerHTML = "<img src="/images/bookmark1.png">";
 // }
 
-function changeImage() {
-					var image = document.getElementById('shortlist');
-					 if (image.src=="/images/bookmark.png") {
-						   image.src = "/images/bookmark1.png";
-					 } else {
-						 image.src = "/images/bookmark.png";
-							}
-					}
+// function changeImage() {
+// 					var image = document.getElementById('shortlist');
+// 					 if (image.src=="/images/bookmark.png") {
+// 						   image.src = "/images/bookmark1.png";
+// 					 } else {
+// 						 image.src = "/images/bookmark.png";
+// 							}
+// 					}
