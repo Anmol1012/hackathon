@@ -1,5 +1,9 @@
 		<div class="container">
-			<script><let details = 'https://www.makaan.com/<%= json.items[i].listing.resaleURL %>';></script>
+			<script>
+
+			var u = '<%= json.items[i].listing.resaleURL %>';
+			var details = 'https://www.makaan.com/' + u;
+		console.log(details);</script>
 			<div class="card" onclick="location.href = details;">
 				<div class="cardimg">
 					<img src="<%= json.items[i].listing.mainImageURL %>" class="cardimg1">
